@@ -1,0 +1,113 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    background-color: black;
+    margin:0px;
+}
+
+.title {
+    text-align: center;
+}
+
+.container{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100vh;
+}
+
+.box{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 1080px;
+    background-color: black;
+    border: 1px solid rgb(71, 71, 71);
+    padding-left: 10px;
+    padding-right: 20px;
+    padding-bottom: 30px;
+}
+
+.form-group{
+    margin-bottom: 20px;
+}
+
+.input-label{
+    margin-bottom: 12px;
+}
+
+.w-full{
+    width: 100%;
+}
+
+.input-text{
+    color: white;
+    background-color: black;
+    border: 1px solid rgb(71, 71, 71);
+    border-radius: 12px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.input-text:hover{
+    background-color:  rgb(71, 71, 71);
+    border: none;
+    border: 1px solid rgb(1, 248, 1);
+}
+
+.btn{
+    border: none;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    font-size: 18px;
+ 
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.btn-green{
+    background-color: rgb(0, 192, 0);
+    color: white;
+}
+.btn-green:hover{
+    background-color: green;
+}
+
+.btn-red{
+    background-color: red;
+    color: white;
+}
+.btn-red:hover{
+    background-color: rgb(100, 0, 0);
+}
+
+.btn-blue{
+    background-color: rgb(34, 34, 255);
+    color: white;
+}
+.btn-blue:hover{
+    background-color: rgb(0, 0, 151);
+}
+
+.center{
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    font-size: 14px;
+    color: white;
+}
+
+a:hover{
+    color: rgb(0, 255, 0);
+    text-decoration: underline;
+}
+
+.footer{
+    text-align: center;
+    background-color: rgb(58, 58, 58);
+    padding-top: 12px;
+    padding-bottom: 24px;
+}
