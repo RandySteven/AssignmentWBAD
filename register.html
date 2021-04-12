@@ -11,20 +11,20 @@
     <div class="container">
         <div class="box">
             <h1 class="title">Register</h1>
-            <form action="">
+            <form action="index.html" onsubmit="return register()" name="registerForm">
                 <div class="form-group">
                     <label for="" class="input-label">Full Name</label>
-                    <input type="text" class="w-full input-text">
+                    <input type="text" class="w-full input-text" name="fullName" id="fullName">
                 </div>
     
                 <div class="form-group">
                     <label for="" class="input-label">Email</label>
-                    <input type="text" class="w-full input-text">
+                    <input type="text" class="w-full input-text" id="email" name="email">
                 </div>
     
                 <div class="form-group">
                     <label for="" class="input-label">Password</label>
-                    <input type="password" class="w-full input-text">
+                    <input type="password" class="w-full input-text" id="password" name="password">
                 </div>
     
                 <div class="form-group">
@@ -54,5 +54,8 @@
         </div>
     </div>  
 
+    <footer class="footer">Copyright &copy; Randy Steven 2020</footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
