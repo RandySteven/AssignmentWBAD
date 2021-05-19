@@ -1,3 +1,8 @@
+html,body{
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
 body{
     font-family: Arial, Helvetica, sans-serif;
     color: white;
@@ -111,4 +116,100 @@ a:hover{
     padding-top: 12px;
     padding-bottom: 24px;
     color: white;
+}
+
+ul.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+  }
+  
+.navbar > li {
+    float: left;
+  }
+  
+.navbar > li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+.navbar > li a:hover {
+    background-color: #111;
+  }
+  
+a.active {
+    background-color: #000;
+}
+
+.cards {
+    display: flex;
+
+    /* Put a card in the next row when previous cards take all width */
+    flex-wrap: wrap;
+
+    margin-left: -8px;
+    margin-right: -8px;
+}
+
+.cards__item {
+    /* There will be 4 cards per row */
+    flex-basis: 25%;
+    background-color: #333;
+    padding-left: 8px;
+    padding-right: 8px;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.centerlization{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.masonry-grid {
+    /* It is split into 3 columns */
+    column-count: 3;
+
+    /* The space between columns */
+    column-gap: 1rem;
+
+    /* Misc */
+    width: 100%;
+}
+
+.masonry-grid__item {
+    /* Prevent a column from breaking into multiple columns */
+    break-inside: avoid;
+    background-color: white;
+    color: black;
+    /* Misc */
+    margin-bottom: 1rem;
+}
+
+.text-blue{
+    color: blue;
+}
+.text-red{
+    color: red;
+}
+.text-green{
+    color: green;
+}
+.text-yellow{
+    color: rgb(209, 209, 0);
+}
+
+.container{
+    height: 100%;
+    margin-bottom: 25px;
 }

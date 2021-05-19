@@ -4,12 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact Us</title>
+    <title>Covid-19 Info</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Index <span id="username"></span> </h1>
+    <ul class="navbar">
+        <li><a class="active" href="#home">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div class="container">
+        <h1 class="text-center">Covid-19</h1>
+        <div class="">
+            <span id="data"></span>
+        </div>
+    
+        <div class="container" style="margin-top: 12px;">
+            <div class="masonry-grid">
+                <span id="provinces"></span>
+            </div>
+        </div>
+
+    </div>    
 
     <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script>
+        $('.count').counterUp({delay:10, time:1000})
+    </script>
+    <footer class="footer">Copyright &copy; Randy Steven 2020</footer>
 </body>
 </html>
