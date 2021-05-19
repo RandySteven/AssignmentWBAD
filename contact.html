@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <ul class="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#news">News</a></li>
+        <li><a class="active" href="contact.html">Contact</a></li>
+    </ul>
+
+    <div class="container">
+        <div class="box">
+            <h1 class="title">Contact Us</h1>
+            <form action="" onsubmit="return register()" name="registerForm">
+                <div class="form-group">
+                    <label for="" class="input-label">Full Name</label>
+                    <input type="text" class="w-full input-text" name="fullName" id="fullName">
+                    <span id="error"></span>
+                </div>
+    
+                <div class="form-group">
+                    <label for="" class="input-label">Email</label>
+                    <input type="text" class="w-full input-text" id="email" name="email">
+                    <span id="error2"></span>
+                </div>
+    
+                <div class="form-group">
+                    <label for="" class="input-label">Phone</label>
+                    <input type="text" class="w-full input-text" id="phone" name="phone">
+                    <span id="error4"></span>
+                </div>
+
+                <div class="form-group">
+                    <label for="" class="input-label">Address</label>
+                    <textarea name="address" id="address" rows="10" class="w-full input-text"></textarea>
+                </div>
+    
+                <div class="form-group">
+                    <button type="submit" class="btn btn-green w-full">Contact Us</button>
+                </div>
+            </form>
+        </div>
+    </div>  
+
+    <script src="script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Counter-Up/1.0.0/jquery.counterup.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
+    <script>
+        $('.count').counterUp({delay:10, time:1000})
+    </script>
+    <footer class="footer">Copyright &copy; Randy Steven 2020</footer>
+</body>
+</html>
