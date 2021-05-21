@@ -12,50 +12,60 @@ function register(){
     var fullName = document.forms["registerForm"]["fullName"].value
     var email = document.forms["registerForm"]["email"].value
     var password = document.forms["registerForm"]["password"].value
+    let validation1, validation2, validation3, validation4, validation5, validation6
     if(fullName === ""){
         document.getElementById('error').innerHTML = `
             <p>Document is undefined</p>
         `
         document.getElementById('error').style.color = 'red'
-        return false
+        validation1 = false;
     }
     if(fullName.length < 5){
         document.getElementById('error').innerHTML = `
             <p>Full Name length must be more than 5</p>
         `
         document.getElementById('error').style.color = 'red'
-        return false
+        validation2 = false;
     }
     if(email === ""){
         document.getElementById('error2').innerHTML = `
             <p>Document is undefined</p>
         `
         document.getElementById('error2').style.color = 'red'
-        return false
+        validation3 = false;
     }
     if(email.length < 5){
         document.getElementById('error2').innerHTML = `
             <p>Email length must be more than 5</p>
         `
         document.getElementById('error2').style.color = 'red'
-        return false
+        validation4 = false;
     }
     if(password === ""){
         document.getElementById('error3').innerHTML = `
             <p>Document is undefined</p>
         `
         document.getElementById('error3').style.color = 'red'
-        return false
+        validation5 = false;
     }
     if(password.length < 5){
         document.getElementById('error3').innerHTML = `
             <p>Password length must more than 5</p>
         `
         document.getElementById('error3').style.color = 'red'
-        return false
+        validation6 = false;
     }
-    let user = new User(fullName, email, password)
-    users.push(user)
+    if(validation1 == false && validation2 == false && validation3 == false
+        && validation4 == false && validation5 == false && validation6 == false){
+            return false;
+        }
+    else{
+        user = new User(fullName, email, password);
+        users.push(user)
+        return true
+    }
+    // let user = new User(fullName, email, password)
+    // users.push(user)
 }
 
 console.log(users)
