@@ -68,50 +68,101 @@ function register(){
     // users.push(user)
 }
 
-console.log(users)
-
-function index(){
-    var email = document.forms["loginForm"]["email"].value
-    var password = document.forms["loginForm"]["password"].value
+function login(){
+    var email = document.forms["loginForm"]["email"].value;
+    var password = document.forms["loginForm"]["password"].value;
+    let validation1, validation2, validation3, validation4;
     if(email === ""){
         document.getElementById('error2').innerHTML = `
             <p>Document is undefined</p>
         `
         document.getElementById('error2').style.color = 'red'
-        return false
+        validation1 = false;
     }
     if(email.length < 5){
         document.getElementById('error2').innerHTML = `
             <p>Email length must be more than 5</p>
         `
         document.getElementById('error2').style.color = 'red'
-        return false
+        validation2 = false;
     }
     if(password === ""){
         document.getElementById('error3').innerHTML = `
             <p>Document is undefined</p>
         `
         document.getElementById('error3').style.color = 'red'
-        return false
+        validation3 = false;
     }
     if(password.length < 5){
         document.getElementById('error3').innerHTML = `
             <p>Password length must more than 5</p>
         `
         document.getElementById('error3').style.color = 'red'
-        return false
+        validation4 = false;
     }
-    for(let i = 0 ; i < users.length ; i++){
-        if(email === users[i].email && password === users[i].password){
-            fullName = users[i].fullName;
-        }else{
-            document.getElementById('errorMessage').innerHTML = `
-                <p>User not found</p>
-            `
-            return false
+    if(validation1 == false && validation2 == false && validation3 == false
+        && validation4 == false){
+            return false;
         }
-    }
+    
 }
+
+console.log(users)
+
+function contactForm(){
+    var fullname = document.forms["contactForm"]["fullName"].value;
+    var email = document.forms["contactForm"]["email"].value;
+    var phone = document.forms["contactForm"]["phone"].value;
+    var address = document.forms["contactForm"]["address"].value;
+    let validation1, validation2, validation3, validation4, validation5, validation6, validation7, validation8;
+    if(fullname === ""){
+        document.getElementById('error').innerHTML = `Fullname must required`;
+        document.getElementById('error').style.color = "red";
+        validation1 = false;
+    }
+    if(fullname.length < 5){
+        document.getElementById('error').innerHTML = `Fullname length must more than 5`;
+        document.getElementById('error').style.color = "red";
+        validation2 = false;
+    }
+    if(email === ""){
+        document.getElementById('error2').innerHTML = "<p>Email must required</p>";
+        document.getElementById('error2').style.color = "red";
+        validation3 = false;
+    }
+    if(email.length < 5){
+        document.getElementById('error2').innerHTML = "<p>Email length must more than 5</p>";
+        document.getElementById('error2').style.color = "red";
+        validation4 = false;
+    }
+    if(phone === ""){
+        document.getElementById('error4').innerHTML = "<p>Phone must required</p>";
+        document.getElementById('error4').style.color = "red";
+        validation5 = false;
+    }
+    if(phone.length != 12){
+        document.getElementById('error4').innerHTML = "<p>Phone length must equal 12</p>";
+        document.getElementById('error4').style.color = "red";
+        validation6 = false;
+    }
+    if(address === ""){
+        document.getElementById('error5').innerHTML = "<p>Address must be required</p>";
+        document.getElementById('error5').style.color = "red";
+        validation7 = false;
+    }
+    if(address.length < 5){
+        document.getElementById('error5').innerHTML = "<p>Address must more than 5</p>";
+        document.getElementById('error5').style.color = "red";
+        validation8 = false;
+    }
+    if  (validation1 == false && validation2 == false &&
+        validation3 == false && validation4 == false &&
+        validation5 == false && validation6 == false &&
+        validation7 == false && validation8 == false){
+            return false;
+        }
+}
+
 const api = 'https://covid19.mathdro.id/api'
 
 fetch(api)
