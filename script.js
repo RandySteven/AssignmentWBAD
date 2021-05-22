@@ -107,21 +107,20 @@ function login(){
     
 }
 
-console.log(users)
 
-function contactForm(){
-    var fullname = document.forms["contactForm"]["fullName"].value;
-    var email = document.forms["contactForm"]["email"].value;
-    var phone = document.forms["contactForm"]["phone"].value;
-    var address = document.forms["contactForm"]["address"].value;
+function contact(){
+    let fullName = document.forms["contactForm"]["fullName"].value;
+    let email = document.forms["contactForm"]["email"].value;
+    let phone = document.forms["contactForm"]["phone"].value;
+    let address = document.forms["contactForm"]["address"].value;
     let validation1, validation2, validation3, validation4, validation5, validation6, validation7, validation8;
-    if(fullname === ""){
-        document.getElementById('error').innerHTML = `Fullname must required`;
+    if(fullName === ""){
+        document.getElementById('error').innerHTML = `<p>Fullname must required</p>`;
         document.getElementById('error').style.color = "red";
         validation1 = false;
     }
-    if(fullname.length < 5){
-        document.getElementById('error').innerHTML = `Fullname length must more than 5`;
+    if(fullName.length < 5){
+        document.getElementById('error').innerHTML = `<p>Fullname length must more than 5</p>`;
         document.getElementById('error').style.color = "red";
         validation2 = false;
     }
